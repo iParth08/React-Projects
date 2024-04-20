@@ -1,11 +1,12 @@
 import "./App.css";
-import RandomBgColor from "./components/RandomBgColor";
+import PasswordGenerator from "./components/PasswordGenerator";
+
 
 function App() {
   return (
     <>
       <div className="wrapper p-5">
-        <RandomBgColor />
+        <PasswordGenerator />
       </div>
     </>
   );

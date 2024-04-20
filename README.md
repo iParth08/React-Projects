@@ -8,7 +8,7 @@
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
   - [Utils - Use It Wherever](#utils---use-it-wherever)
-  - [Project - 1 : Random Color Generator](#project---1--random-color-generator)
+  - [Project - 2 : Password Generator](#project---2--password-generator)
 
 ## Getting Started
 
@@ -54,7 +54,7 @@
 - project : a string
 - description - an array of strings, which is mapped to the _key_ and _value_ of the _HoverTip_.
 
-## Project - 1 : Random Color Generator
+## Project - 2 : Password Generator
 
 A simple project to generate random colors using hsl color scheme.
 It also has an array of colors which is used to generate color buttons.
