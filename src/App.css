@@ -9,10 +9,90 @@
   scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
 
-.tooltip:hover{
+.tooltip:hover {
   cursor: pointer;
   background-color: lightgreen;
   height: 3.5rem;
   width: 3.5rem;
   box-shadow: 3px 3px 5px white;
+}
+
+.hover-wrapper {
+  z-index: 100;
+}
+
+/********** Range Input Styles **********/
+/*Range Reset*/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 20rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #053a5f;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+
+  /*custom styles*/
+  background-color: #5c7beb;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 2px solid #f4fc03;
+  outline: 5px solid #ffffff;
+  outline-offset: 0.25rem;
+}
+
+/******** Firefox styles ********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #053a5f;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 100%; /*Removes default border-radius that FF applies*/
+
+  /*custom styles*/
+  background-color: #5cd5eb;
+  height: 2rem;
+  width: 2rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+}
+
+input[type="checkbox"] {
+  transform: scale(2);
+}
+
+input:checked + label {
+  color: rgb(46, 181, 249);
+  font-weight: bold;
 }
