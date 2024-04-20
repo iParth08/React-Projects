@@ -12,7 +12,8 @@
 
 ## Getting Started
 
-> [!TIP] How to set up your development environment
+> [!TIP]  
+> How to set up your development environment
 
 1. Run `npm create vite@latest` in your terminal.
 2. Run `npm install` to download the dependencies.
@@ -60,8 +61,8 @@ A simple project to generate random colors using hsl color scheme.
 It also has an array of colors which is used to generate color buttons.
 Background color is changed when you click on any of the color buttons, as well as name or hsl code is displayed on the screen
 
-> [!IMPORTANT] > **What to learn from it :**
->
+> [!IMPORTANT]
+> **What to learn from it :**
 > - State of a component
 > - Conditional Rendering
 > - Event Handling
@@ -73,3 +74,5 @@ Background color is changed when you click on any of the color buttons, as well 
 - `map` : use of map to generate color-buttons
 - **Conditional Rendering** : _HoverTip_ is rendered conditionally when an icon is clicked.
 - **Props** : Props are send to the _HoverTip_ component as an object having a string and an array of strings.
+
+
