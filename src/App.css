@@ -1,0 +1,18 @@
+/* Custom CSS */
+/* Hide the scrollbar for all browsers */
+::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit-based browsers */
+}
+
+/* Hide the scrollbar for Firefox */
+* {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.tooltip:hover{
+  cursor: pointer;
+  background-color: lightgreen;
+  height: 3.5rem;
+  width: 3.5rem;
+  box-shadow: 3px 3px 5px white;
+}
