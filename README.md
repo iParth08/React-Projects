@@ -13,7 +13,7 @@
 
 ## Getting Started
 
-> [!TIP] 
+> [!TIP]
 > How to set up your development environment
 
 1. Run `npm create vite@latest` in your terminal.
@@ -80,8 +80,8 @@ Background color is changed when you click on any of the color buttons, as well 
 
 A simple project to generate a random password having options to adjust length and include special characters, Upper and Lower case as well as numbers.
 
-> [!IMPORTANT] 
->  **What to learn from it :**
+> [!IMPORTANT]
+> **What to learn from it :**
 >
 > - State of a component
 > - Conditional Rendering
