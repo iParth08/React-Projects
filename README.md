@@ -10,6 +10,7 @@
   - [Utils - Use It Wherever](#utils---use-it-wherever)
   - [Project - 1 : Random Color Generator](#project---1--random-color-generator)
   - [Project - 2 : Password Generator](#project---2--password-generator)
+  - [Project - 3 : Currency Converter](#project---3--currency-converter)
 
 ## Getting Started
 
@@ -112,3 +113,16 @@ A simple project to generate a random password having options to adjust length a
   </p>
 
 ```
+
+## Project - 3 : Currency Converter
+A basic project to convert between currencies using current exchange rates.
+Current rates are fetched from an API.
+
+> [!IMPORTANT]   
+> **What to learn from it :**
+>
+> - State of a component
+> - Conditional Rendering
+> - Event Handling
+> - Math.random() and Math.floor()
+> - Sending Props and map
