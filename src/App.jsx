@@ -1,12 +1,11 @@
 import "./App.css";
-import PasswordGenerator from "./components/PasswordGenerator";
-
+import CurrencyConvertor from "./components/CurrencyConvertor";
 
 function App() {
   return (
     <>
       <div className="wrapper p-5">
-        <PasswordGenerator />
+        <CurrencyConvertor />
       </div>
     </>
   );
