@@ -133,3 +133,18 @@ Current rates are fetched from an API.
 - `Object.keys` : to get the keys of an object for mapping select options
 - *CurrencyShorts* : Custom Object to limit the options to choose from, and provide country-currency names
 - **swapCurrencies** : function to swap input and output currencies and selected options
+
+> [!NOTE]
+> API URL : `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`
+> 
+```JSX
+// useEffect is used here to fetch exchange rates on page load and when currency selection changes
+    useEffect(() => {
+    fetch(
+      `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`
+    )
+      .then((response) => response.json())
+      .then((data) => setCurrencyInfo(data[currency]));
+  }, [currency]);
+  
+```
