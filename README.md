@@ -82,7 +82,7 @@ Background color is changed when you click on any of the color buttons, as well 
 
 A simple project to generate a random password having options to adjust length and include special characters, Upper and Lower case as well as numbers.
 
-> [!IMPORTANT]   
+> [!IMPORTANT]  
 > **What to learn from it :**
 >
 > - State of a component
@@ -115,10 +115,11 @@ A simple project to generate a random password having options to adjust length a
 ```
 
 ## Project - 3 : Currency Converter
+
 A basic project to convert between currencies using current exchange rates.
 Current rates are fetched from an API.
 
-> [!IMPORTANT]   
+> [!IMPORTANT]  
 > **What to learn from it :**
 >
 > - Fetching API
@@ -131,5 +132,20 @@ Current rates are fetched from an API.
 - **useCurrencyInfo** : custom hook to fetch exchange rates from API
 - **InputCurrency** : component to display input currency (customizable with props)
 - `Object.keys` : to get the keys of an object for mapping select options
-- *CurrencyShorts* : Custom Object to limit the options to choose from, and provide country-currency names
+- _CurrencyShorts_ : Custom Object to limit the options to choose from, and provide country-currency names
 - **swapCurrencies** : function to swap input and output currencies and selected options
+
+> [!NOTE]
+> API URL : `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`
+
+```JSX
+// useEffect is used here to fetch exchange rates on page load and when currency selection changes
+    useEffect(() => {
+    fetch(
+      `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`
+    )
+      .then((response) => response.json())
+      .then((data) => setCurrencyInfo(data[currency]));
+  }, [currency]);
+
+```
