@@ -62,7 +62,8 @@ A simple project to generate random colors using hsl color scheme.
 It also has an array of colors which is used to generate color buttons.
 Background color is changed when you click on any of the color buttons, as well as name or hsl code is displayed on the screen
 
-> [!IMPORTANT] > **What to learn from it :**
+> [!IMPORTANT]  
+> **What to learn from it :**
 >
 > - State of a component
 > - Conditional Rendering
@@ -80,7 +81,7 @@ Background color is changed when you click on any of the color buttons, as well 
 
 A simple project to generate a random password having options to adjust length and include special characters, Upper and Lower case as well as numbers.
 
-> [!IMPORTANT]
+> [!IMPORTANT]   
 > **What to learn from it :**
 >
 > - State of a component
