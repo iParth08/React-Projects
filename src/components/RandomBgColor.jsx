@@ -49,7 +49,7 @@ const RandomBgColor = () => {
   return (
     <div>
       {/* Project Title */}
-      <h2 className="text-3xl font-bold text-orange-500">
+      <h2 className="text-3xl font-bold text-orange-500 mb-10">
         Project 1 : &nbsp;
         <span className="text-white underline underline-offset-4">
           Random Color Generator

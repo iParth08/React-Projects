@@ -121,8 +121,15 @@ Current rates are fetched from an API.
 > [!IMPORTANT]   
 > **What to learn from it :**
 >
-> - State of a component
-> - Conditional Rendering
-> - Event Handling
-> - Math.random() and Math.floor()
+> - Fetching API
+> - Custom Hooks
+> - Function and classNames as props
+> - Mapping using Object.keys
 > - Sending Props and map
+> - Component Reusability
+
+- **useCurrencyInfo** : custom hook to fetch exchange rates from API
+- **InputCurrency** : component to display input currency (customizable with props)
+- `Object.keys` : to get the keys of an object for mapping select options
+- *CurrencyShorts* : Custom Object to limit the options to choose from, and provide country-currency names
+- **swapCurrencies** : function to swap input and output currencies and selected options

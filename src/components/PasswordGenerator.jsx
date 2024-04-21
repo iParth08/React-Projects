@@ -72,7 +72,7 @@ const PasswordGenerator = () => {
   return (
     <div>
       {/* Project Title */}
-      <h2 className="text-3xl font-bold text-sky-500">
+      <h2 className="text-3xl font-bold text-sky-500 mb-10">
         Project 2 : &nbsp;
         <span className="text-white underline underline-offset-4">
           Password Generator
