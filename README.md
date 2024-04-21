@@ -8,11 +8,12 @@
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
   - [Utils - Use It Wherever](#utils---use-it-wherever)
+  - [Project - 1 : Random Color Generator](#project---1--random-color-generator)
   - [Project - 2 : Password Generator](#project---2--password-generator)
 
 ## Getting Started
 
-> [!TIP] 
+> [!TIP]
 > How to set up your development environment
 
 1. Run `npm create vite@latest` in your terminal.
@@ -55,12 +56,32 @@
 - project : a string
 - description - an array of strings, which is mapped to the _key_ and _value_ of the _HoverTip_.
 
+## Project - 1 : Random Color Generator
+
+A simple project to generate random colors using hsl color scheme.
+It also has an array of colors which is used to generate color buttons.
+Background color is changed when you click on any of the color buttons, as well as name or hsl code is displayed on the screen
+
+> [!IMPORTANT] > **What to learn from it :**
+>
+> - State of a component
+> - Conditional Rendering
+> - Event Handling
+> - Math.random() and Math.floor()
+> - Sending Props and map
+
+- `useState` : color is used for background color, it is updated from an array of colors when any button is clicked or random color generator function, when **surpriseMe** is clicked.
+- **randomColorGenerator** : function to generate random color using hsl color style and `Math.random()`
+- `map` : use of map to generate color-buttons
+- **Conditional Rendering** : _HoverTip_ is rendered conditionally when an icon is clicked.
+- **Props** : Props are send to the _HoverTip_ component as an object having a string and an array of strings.
+
 ## Project - 2 : Password Generator
 
 A simple project to generate a random password having options to adjust length and include special characters, Upper and Lower case as well as numbers.
 
-> [!IMPORTANT] 
->  **What to learn from it :**
+> [!IMPORTANT]
+> **What to learn from it :**
 >
 > - State of a component
 > - Conditional Rendering
