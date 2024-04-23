@@ -1,15 +1,15 @@
 import "./App.css";
-import RandomBgColor from "./components/RandomBgColor";
-import PasswordGenerator from "./components/PasswordGenerator";
-import CurrencyConvertor from "./components/CurrencyConvertor";
+
+import Navbar from "./components/common/Navbar";
+
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <div className="wrapper flex flex-col gap-8 p-8">
-        <RandomBgColor />
-        <PasswordGenerator />
-        <CurrencyConvertor />
+      <Navbar />
+      <div className="wrapper flex flex-col gap-8 p-8 mt-[10vh]">
+        <Outlet />
       </div>
     </>
   );

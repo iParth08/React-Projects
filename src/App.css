@@ -1,4 +1,15 @@
 /* Custom CSS */
+
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+
+.zeyada-regular {
+  font-family: "Zeyada", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Hide the scrollbar for all browsers */
 ::-webkit-scrollbar {
   display: none; /* Hide scrollbar for webkit-based browsers */
@@ -7,6 +18,47 @@
 /* Hide the scrollbar for Firefox */
 * {
   scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Navbar Styles */
+/* Remove the default triangle */
+
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Create a new custom triangle on the right side */
+summary::after {
+  margin-left: 0.5rem;
+  display: inline-block;
+  content: "▶";
+  transition: 0.2s;
+}
+
+details[open] > summary::after {
+  transform: rotate(90deg);
+}
+
+ul {
+  list-style: none;
+  background-color: rgb(39, 39, 42);
+  color: #fff;
+  border-radius: 10%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  max-height: 300px;
+}
+
+ul > li {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-bottom: 2px solid #ccc;
 }
 
 .tooltip:hover {
@@ -18,7 +70,7 @@
 }
 
 .hover-wrapper {
-  z-index: 100;
+  z-index: 50;
 }
 
 /********** Range Input Styles **********/
