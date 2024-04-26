@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import HoverTip from "../utils/HoverTip";
 import bgVideo from "../assets/video_3.mp4";
 
@@ -29,6 +29,11 @@ const Stopwatch = () => {
 
   const pad0 = (num) => String(num).padStart(2, "0");
   const intervalTicket = useRef(null);
+
+  useEffect(() => {
+    let logString = localStorage.getItem("logs");
+    logString && setLogs(JSON.parse(logString));
+  }, [isRunning]);
 
   const start = () => {
     setTime((prev) => {
@@ -66,11 +71,19 @@ const Stopwatch = () => {
     });
     clearInterval(intervalTicket.current);
     setIsRunning(false);
-    setLogs([]);
+    setLogs(() => {
+      let newLogs = [];
+      localStorage.setItem("logs", JSON.stringify(newLogs));
+      return newLogs;
+    });
   };
 
   const logTime = () => {
-    setLogs((prev) => [time, ...prev]);
+    setLogs((prev) => {
+      let newLogs = [time, ...prev];
+      localStorage.setItem("logs", JSON.stringify(newLogs));
+      return newLogs;
+    });
   };
 
   const playClass = `bg-green-500 hover:bg-green-700 text-3xl text-white font-bold py-5 px-5 rounded-full mt-5`;
