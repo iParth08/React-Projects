@@ -33,7 +33,7 @@ const Stopwatch = () => {
   useEffect(() => {
     let logString = localStorage.getItem("logs");
     logString && setLogs(JSON.parse(logString));
-  }, [logs]);
+  }, [isRunning]);
 
   const start = () => {
     setTime((prev) => {
