@@ -1,11 +1,11 @@
 import "./App.css";
-import CurrencyConvertor from "./components/CurrencyConvertor";
+import Stopwatch from "./components/Stopwatch";
 
 function App() {
   return (
     <>
       <div className="wrapper p-5">
-        <CurrencyConvertor />
+        <Stopwatch />
       </div>
     </>
   );

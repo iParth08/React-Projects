@@ -149,3 +149,4 @@ Current rates are fetched from an API.
   }, [currency]);
 
 ```
+
