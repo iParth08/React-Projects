@@ -153,6 +153,7 @@ Current rates are fetched from an API.
 ```
 
 ## Project - 4 : Stop Watch
+
 A very simple project to display the time elapsed in seconds. It also has a button to start and stop the timer, reset the timer and log the time elapsed.  
 Its main focus is to familiarize with setInterval and clearInterval, along with a little teasing about localStorage, video/audio, etc.
 
@@ -160,7 +161,42 @@ Its main focus is to familiarize with setInterval and clearInterval, along with 
 > **What to learn from it :**
 >
 > - State of a component in Object
-> - Destructuring
 > - setInterval and clearInterval
-> - localStorage
 > - video/audio as background music
+> - padding a string
+> - useRef importance
+> - useEffect to auto fetch logs from localStorage
+> - logging time in localStorage
+
+- `useState` : for single time object to contain miliseconds, seconds and minutes
+- `useRef` : for refering the setInterval function
+- `useEffect` : to fetch logs from localStorage on start up / logs change
+- **start** : function that sets the value of time state
+- **toggleAction** : its either setInterval or clearInterval based on isRunning state
+- **resetTime** : function to reset the time and isRunning state
+- **logTime** : function to record the current time in localStorage
+
+```JSX
+// padding 0s to a string
+const pad0 = (num) => String(num).padStart(2, "0");
+
+// using setState function to update entire set in one go
+const start = () => {
+    setTime((prev) => {
+      let newMili = prev.mili + 100;
+      let newSec = prev.sec;
+      let newMin = prev.min;
+      if (newMili >= 1000) {
+        newMili = 0;
+        newSec++;
+
+        if (newSec >= 60) {
+          newSec = 0;
+          newMin++;
+        }
+      }
+
+      return { mili: newMili, sec: newSec, min: newMin };
+    });
+
+```
