@@ -74,6 +74,16 @@ const Navbar = () => {
                 P3_Currency Convertor
               </NavLink>
             </li>
+
+            <li>
+              <NavLink
+                to="projects/Stopwatch"
+                onClick={() => setColor("teal-500")}
+                className={"hover:text-teal-500"}
+              >
+                P4_Stop Watch
+              </NavLink>
+            </li>
           </ul>
         </div>
       </nav>
