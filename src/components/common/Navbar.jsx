@@ -15,8 +15,8 @@ const Navbar = () => {
       style={{ zIndex: 200 }}
     >
       <h2 className="text-4xl font-bold">
-        <span className={`pr-4 text-${color}`}>React</span>
-        Projects
+        <span className={`text-${color}`}>Partho</span>
+        folio
       </h2>
 
       <h3 className="zeyada-regular text-4xl">by SPD</h3>
@@ -39,7 +39,7 @@ const Navbar = () => {
         </span>
         <details>
           <summary onClick={() => setDrop(drop === "none" ? "block" : "none")}>
-            PROJECTS
+            J4FUN
           </summary>
         </details>
         <div
