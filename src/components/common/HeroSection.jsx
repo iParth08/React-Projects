@@ -13,7 +13,7 @@ const HeroSection = () => {
             <span className="absolute"></span>
             <span className="absolute"></span>
             <span className="absolute"></span>
-            <div className="hero h-[300px] w-[300px] bg-gray-900"></div>
+            <div className="hero h-[300px] w-[300px]" style={{backgroundImage: "url(./character/shade.jpeg)"}}></div>
           </div>
         </div>
       </div>

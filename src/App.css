@@ -82,7 +82,7 @@
 }
 
 .hero {
-  background: url("public/character/shade.jpeg");
+  /* background: url("./character/shade.jpeg"); */
   background-size: cover;
   position: absolute;
   top: 50%;
