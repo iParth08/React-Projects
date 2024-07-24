@@ -18,156 +18,104 @@
 /* Hide the scrollbar for Firefox */
 * {
   scrollbar-width: none; /* Hide scrollbar for Firefox */
+  padding: 0;
+  margin: 0;
 }
 
 /* Navbar Styles */
-/* Remove the default triangle */
-
-details > summary {
-  list-style: none;
-  cursor: pointer;
-  margin-bottom: 20px;
+.navbar span {
+  background-color: transparent;
+  padding: 0.5rem;
 }
-details > summary::-webkit-details-marker {
+
+.navbar span a:hover {
+  text-decoration: none;
+}
+
+.overlay {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.holder {
+  position: relative;
+}
+
+.holder:hover span {
+  height: 350px;
+  width: 350px;
+  border: none;
+}
+
+.holder span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  height: 320px;
+  width: 320px;
+  transition: all 1.5s ease;
   display: none;
 }
 
-/* Create a new custom triangle on the right side */
-summary::after {
-  margin-left: 0.5rem;
-  display: inline-block;
-  content: "▶";
-  transition: 0.2s;
+.holder span:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  border: 2px solid rgba(25, 169, 25, 0.568);
+  animation: animate 5s linear infinite;
 }
 
-details[open] > summary::after {
-  transform: rotate(90deg);
+.holder span:nth-child(2) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  border: 2px solid rgba(7, 211, 7, 0.702);
+  animation: animate 7s linear infinite;
 }
 
-ul {
-  list-style: none;
-  background-color: rgb(39, 39, 42);
-  color: #fff;
-  border-radius: 10%;
-  overflow-x: hidden;
-  overflow-y: auto;
-
-  max-height: 300px;
+.holder span:nth-child(3) {
+  border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  border: 2px solid rgba(5, 118, 5, 0.424);
+  animation: animate 4s linear infinite;
 }
 
-ul > li {
-  cursor: pointer;
-  padding: 0.5rem;
-  border-bottom: 2px solid #ccc;
-}
-
-.tooltip:hover {
-  cursor: pointer;
-  background-color: lightgreen;
-  height: 3.5rem;
-  width: 3.5rem;
-  box-shadow: 3px 3px 5px white;
-}
-
-.hover-wrapper {
-  z-index: 50;
-}
-
-/********** Range Input Styles **********/
-/*Range Reset*/
-input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  background: transparent;
-  cursor: pointer;
-  width: 20rem;
-}
-
-/* Removes default focus */
-input[type="range"]:focus {
-  outline: none;
-}
-
-/***** Chrome, Safari, Opera and Edge Chromium styles *****/
-/* slider track */
-input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #053a5f;
-  border-radius: 0.5rem;
-  height: 0.5rem;
-}
-
-/* slider thumb */
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  margin-top: -4px; /* Centers thumb on the track */
-
-  /*custom styles*/
-  background-color: #5c7beb;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 100%;
-}
-
-input[type="range"]:focus::-webkit-slider-thumb {
-  border: 2px solid #f4fc03;
-  outline: 5px solid #ffffff;
-  outline-offset: 0.25rem;
-}
-
-/******** Firefox styles ********/
-/* slider track */
-input[type="range"]::-moz-range-track {
-  background-color: #053a5f;
-  border-radius: 0.5rem;
-  height: 0.5rem;
-}
-
-/* slider thumb */
-input[type="range"]::-moz-range-thumb {
-  border: none; /*Removes extra border that FF applies*/
-  border-radius: 100%; /*Removes default border-radius that FF applies*/
-
-  /*custom styles*/
-  background-color: #5cd5eb;
-  height: 2rem;
-  width: 2rem;
-}
-
-input[type="range"]:focus::-moz-range-thumb {
-  border: 1px solid #053a5f;
-  outline: 3px solid #053a5f;
-  outline-offset: 0.125rem;
-}
-
-input[type="checkbox"] {
-  transform: scale(2);
-}
-
-input:checked + label {
-  color: rgb(46, 181, 249);
-  font-weight: bold;
-}
-
-/* Stopwatch timelog Section */
-.time-section p:nth-child(3) {
-  color: #f4fc03;
-}
-
-.time-section p:nth-child(2) {
-  color: #03e7fc;
-}
-
-.time-section p:nth-child(1) {
-  color: #03fc7b;
-}
-
-.time-bg-video {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.hero {
+  background: url("public/character/shade.jpeg");
+  background-size: cover;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  animation: borimate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes borimate {
+  0% {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  }
+  25% {
+    border-radius: 44% 56% 58% 42% / 16% 40% 60% 84%;
+  }
+  50% {
+    border-radius: 69% 31% 31% 69% / 56% 25% 75% 44%;
+  }
+  75% {
+    border-radius: 59% 41% 24% 76% / 43% 56% 44% 57%;
+  }
+  100% {
+    border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  }
 }

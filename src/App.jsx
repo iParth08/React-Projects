@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="wrapper flex flex-col gap-8 p-8 mt-[10vh]">
+      <div className="wrapper flex flex-col gap-8 mt-[15vh]">
         <Outlet />
       </div>
     </>

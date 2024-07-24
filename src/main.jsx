@@ -5,12 +5,9 @@ import "./index.css";
 import App from "./App.jsx";
 import Home from "./components/common/Home.jsx";
 import Contact from "./components/common/Contact.jsx";
+import Projects from "./components/common/Projects.jsx";
 
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import RandomBgColor from "./components/RandomBgColor.jsx";
-import PasswordGenerator from "./components/PasswordGenerator.jsx";
-import CurrencyConvertor from "./components/CurrencyConvertor.jsx";
-import Stopwatch from "./components/Stopwatch.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,21 +22,9 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: "projects/RandomBgColor",
-        element: <RandomBgColor />,
+        path: "projects",
+        element: <Projects />,
       },
-      {
-        path: "projects/PasswordGenerator",
-        element: <PasswordGenerator />,
-      },
-      {
-        path: "projects/CurrencyConvertor",
-        element: <CurrencyConvertor />,
-      },
-      {
-        path: "projects/Stopwatch",
-        element: <Stopwatch />,
-      }
     ],
   },
 ]);
