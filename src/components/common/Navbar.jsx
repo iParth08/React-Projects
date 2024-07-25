@@ -15,13 +15,13 @@ const Navbar = () => {
       className="w-full h-[12vh] bg-zinc-800 text-white flex justify-between items-baseline py-4 px-20 fixed top-0 left-0"
       style={{ zIndex: 200 }}
     >
-      <h2 className="text-4xl font-bold">
-        <span className={`text-${color}`}>Partho</span>
+      <h2 className="text-4xl font-bold satisfy-regular">
+        <span className={`logo-text text-${color}`}>Partho</span>
         folio
       </h2>
 
       {/* <h3 className="zeyada-regular text-4xl">by SPD</h3> */}
-      <nav className="navbar flex md:gap-5 md:text-xl sm:text-md overflow-visible relative">
+      <nav className="navbar flex text-sm overflow-visible relative">
         <span>
           <NavLink
             to=""

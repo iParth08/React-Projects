@@ -3,12 +3,26 @@
 /* Fonts */
 
 @import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 .zeyada-regular {
   font-family: "Zeyada", cursive;
   font-weight: 400;
   font-style: normal;
 }
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* Hide the scrollbar for all browsers */
 ::-webkit-scrollbar {
@@ -57,28 +71,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  height: 320px;
-  width: 320px;
+  height: 300px;
+  width: 300px;
   transition: all 1.5s ease;
-  display: none;
+  /* display: none; */
 }
 
 .holder span:nth-child(1) {
   border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
   border: 2px solid rgba(25, 169, 25, 0.568);
-  animation: animate 5s linear infinite;
-}
-
-.holder span:nth-child(2) {
-  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
-  border: 2px solid rgba(7, 211, 7, 0.702);
-  animation: animate 7s linear infinite;
-}
-
-.holder span:nth-child(3) {
-  border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
-  border: 2px solid rgba(5, 118, 5, 0.424);
-  animation: animate 4s linear infinite;
+  background: rgba(10, 209, 10, 0.751);
+  animation: rotatimate 8s linear infinite;
 }
 
 .hero {
@@ -93,7 +96,47 @@
   animation: borimate 5s linear infinite;
 }
 
-@keyframes animate {
+.wavy-text {
+  display: block;
+  font-family: poppins, sans-serif;
+  font-weight: 900;
+  position: relative;
+}
+
+.wavy-text h1 {
+  position: absolute;
+}
+
+.wavy-text h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px #05b45a;
+}
+
+.wavy-text h1:nth-child(2) {
+  color: #05b45a;
+  animation: wavymation 2s ease-in-out infinite;
+}
+
+.vanish-text {
+  -webkit-text-stroke: 2px #ffffffb2;
+  color: transparent;
+}
+
+.vanish-text h1 {
+
+  position: relative;
+  height: 80px;
+  line-height: 80px;
+  /* background-color: red; */
+  overflow: hidden;
+}
+.vanish-text h1 span {
+  position: absolute;
+  top: 0;
+  animation: vanish 18s ease-in-out infinite;
+}
+
+@keyframes rotatimate {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
@@ -117,5 +160,58 @@
   }
   100% {
     border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+  }
+}
+
+@keyframes wavymation {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      15% 44%,
+      32% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      16% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0 100%
+    );
+  }
+}
+
+@keyframes vanish {
+  0%,
+  100% {
+    top: 0;
+  }
+  32% {
+    top: 0;
+  }
+  33%{
+    top: -85px;
+  }
+  66% {
+    top: -85px;
+  }
+  67% {
+    top: -170px;
+  }
+  99% {
+    top: -170px;
   }
 }

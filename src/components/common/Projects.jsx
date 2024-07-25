@@ -29,7 +29,7 @@ const Projects = () => {
     },
   ];
   return (
-    <div className="container flex-col">
+    <div className="container flex-col px-10">
       <div className="text-3xl flex justify-center items-center">Projects</div>
       <h2 className="text-2xl mb-4">Fun Projects</h2>
       <div className="fun-projects flex justify-between">
